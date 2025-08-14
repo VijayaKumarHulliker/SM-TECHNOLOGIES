@@ -5,7 +5,7 @@ import NavBar from './component/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ServiceDetailPage from './component/ServiceDetailPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AboutPage from './component/Aboutus';
+import AboutUs from './component/Aboutus';
 import ScrollToTop from './component/ScrollToTop';
 import ScrollToHashElement from './component/ScrollToHashElement';
 

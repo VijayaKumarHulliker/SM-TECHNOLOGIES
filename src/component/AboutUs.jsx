@@ -4,7 +4,7 @@ import MissionVisionSection from './Mission';
 import ShapeExample from './ImageGrid';
 import Float from './Float';
 
-const AboutPage = () => {
+const AboutUs = () => {
   return (
     <>
       <div className='abback'>
@@ -58,4 +58,4 @@ const AboutPage = () => {
     </>
   );
 };
-export default AboutPage;
+export default AboutUs;
