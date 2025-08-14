@@ -1,0 +1,46 @@
+.tech-scroll-container {
+  width: 80%;
+  height: 300px;
+  overflow: hidden;
+  padding: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(204, 12, 12, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(80px);
+  border: transparent;
+  background: white;
+}
+
+.tech-scroll-track {
+  display: flex;
+  animation: scrollLeft 30s linear infinite;
+  width: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.tech-logo {
+  flex: 0 0 auto;
+  padding: 0 30px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.tech-logo:hover {
+  opacity: 1;
+}
+
+.tech-logo img {
+  height: 60px;
+  width: auto;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

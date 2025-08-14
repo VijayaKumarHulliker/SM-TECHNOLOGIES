@@ -1,0 +1,55 @@
+/* Default: Desktop layout stays horizontal */
+.horizontal-card {
+  width: 45rem;
+  height: 13rem;
+}
+
+.horizontal-card-img {
+  height: 207px;
+  width: 250px;
+  object-fit: cover;
+}
+
+/* Tablet: stack vertically but still keep image decent size */
+@media (max-width: 992px) {
+  .horizontal-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .horizontal-card .row {
+    flex-direction: column;
+  }
+
+  .horizontal-card-img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+}
+
+/* Mobile: stack vertically with full width image */
+@media (max-width: 576px) {
+  .horizontal-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .horizontal-card .row {
+    flex-direction: column;
+  }
+
+  .horizontal-card-img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .horizontal-card .card-body {
+    text-align: center;
+  }
+
+  .horizontal-card button {
+    width: 100%;
+  }
+}

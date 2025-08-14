@@ -1,0 +1,161 @@
+.hero-section {
+  min-height: 100vh;
+}
+
+.hero-img {
+  max-width: 300px;
+  animation: float ease-in-out infinite;
+}
+
+/* Simple float animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation classes */
+.animated {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  color: white;
+}
+
+.delay-1s {
+  animation-delay: 0.5s;
+}
+
+/* Keyframes */
+@keyframes fadeInLeft {
+  0% {
+    /* opacity: 1; */
+    transform: translateX(-40px);
+  }
+
+  50% {
+    /* opacity: 1; */
+    transform: translateX(0);
+  }
+
+  100% {
+    /* opacity: 1; */
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Tablet Screens (≤ 992px) */
+@media (max-width: 992px) {
+  .hero-section {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-img {
+    display: none;
+    /* 👈 hide image on tablet and below */
+  }
+
+  .feature-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    /* stack vertically */
+    align-items: center;
+    /* center horizontally */
+    justify-content: center;
+    /* center vertically if needed */
+    gap: 1.5rem;
+    /* space between cards */
+  }
+
+  .feature-card {
+    width: 90%;
+    /* make card wide but still leave some space on sides */
+    max-width: 400px;
+    /* limit maximum width for large tablets */
+  }
+}
+
+/* 📱 Mobile Screens (≤ 576px) */
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card {
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+}

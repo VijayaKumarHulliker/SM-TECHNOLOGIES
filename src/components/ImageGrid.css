@@ -1,0 +1,30 @@
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-title {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover .image-title {
+  transform: translateX(-50%) scale(1.2);
+}

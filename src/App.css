@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/bg-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+.navbar {
+  background: linear-gradient(to right, #9ad8ef, #f0a8a8);
+  height: 10vh;
+}
+
+.nav_font {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .dropdown-toggle {
+  color: #1b3556 !important;
+  font-weight: bold;
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover,
+.navbar .dropdown-toggle:hover {
+  text-decoration: dotted;
+  text-decoration: underline #1b3556 3px;
+  border-radius: 10px;
+}
+
+/* 💻 Medium Laptop Screens (≤ 1200px) */
+@media (max-width: 1200px) {
+  .nav_font {
+    font-size: 26px;
+  }
+
+  .navbar .nav-link {
+    font-size: 16px;
+  }
+}
+
+/* 📱 Tablet Screens (≤ 992px) */
+@media (max-width: 992px) {
+  .nav_font {
+    font-size: 22px;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar-brand img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .navbar .nav-link {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+}
+
+/* 📱 Mobile Screens (≤ 576px) */
+@media (max-width: 576px) {
+  .nav_font {
+    font-size: 18px;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar .nav-link {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .navbar .dropdown-toggle {
+    font-size: 14px;
+  }
+}
+
+
+
+
+/*Home.jsx*/
+
+.home-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  /* adds space above and below */
+  min-height: 300px;
+}
+
+.techscroll-container {
+  margin-top: 30px;
+}
+
+.theme-overlay {
+  position: relative;
+  top: 70px;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out 1s;
+}
+
+.home_themebox_border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(204, 12, 12, 0.3);
+  backdrop-filter: blur(20px);
+  background: transparent;
+  padding: 10px;
+}
+
+.theme-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.theme-description {
+  font-size: 1.5rem;
+  max-width: 800px;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-row .d-flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.info-box {
+  height: auto;
+  width: 300px;
+  background-color: #3e1a90;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  color: white;
+}
+
+.info-box h6 {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+/* 📱 Tablet view */
+@media (max-width: 1024px) {
+  .theme-title {
+    font-size: 2.2rem;
+  }
+
+  .theme-description {
+    font-size: 1.2rem;
+  }
+
+  .info-box {
+    width: 250px;
+  }
+
+  .info-row {
+    margin-bottom: 15px;
+  }
+
+  .home-wrapper {
+    height: auto;
+    /* allow it to grow */
+    padding-bottom: 2rem;
+    /* space after section */
+  }
+
+  .techscroll-container {
+    margin-top: 6rem;
+  }
+}
+
+/* 📱 Mobile view */
+@media (max-width: 768px) {
+  .theme-title {
+    font-size: 1.8rem;
+  }
+
+  .theme-description {
+    font-size: 1rem;
+  }
+
+  .info-row {
+    margin-bottom: 15px;
+  }
+
+  .info-row .d-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-box {
+    width: 90%;
+  }
+
+  .home-wrapper {
+    height: auto;
+    padding-bottom: 3rem;
+    /* more spacing for small screens */
+  }
+
+  .techscroll-container {
+    margin-top: 1rem;
+  }
+}
+
+/* 📱 Small mobile view */
+@media (max-width: 480px) {
+  .theme-title {
+    font-size: 1.5rem;
+  }
+
+  .theme-description {
+    font-size: 0.9rem;
+  }
+
+  .info-box h3 {
+    font-size: 1rem;
+  }
+
+  .info-box h6 {
+    font-size: 0.85rem;
+  }
+
+  .info-row {
+    margin-bottom: 15px;
+  }
+}

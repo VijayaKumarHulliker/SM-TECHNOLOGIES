@@ -1,0 +1,121 @@
+.BranchAndWorkflowmain {
+  width: 100%;
+  height: 70%;
+}
+
+.BranchAndWorkflow_domains {
+  width: 30%;
+  height: 60%;
+  border: solid 2px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(80px);
+  border: transparent;
+  background: white;
+}
+
+.BranchAndWorkflow_workflow {
+  width: 30%;
+  height: 60vh;
+  /* Fixed height to allow scroll */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.BranchAndWorkflow_workflow::-webkit-scrollbar {
+  width: 6px;
+}
+
+.BranchAndWorkflow_workflow::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+/* ======== Tablet and Mobile (≤ 992px) ======== */
+@media (max-width: 992px) {
+  .BranchAndWorkflowmain {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically if needed */
+    gap: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    /* Center all text inside children */
+  }
+
+  .BranchAndWorkflow_domains,
+  .BranchAndWorkflow_workflow {
+    width: 95%;
+    /* Almost full width, with some margin */
+    max-width: 600px;
+    /* Prevent too wide on tablets */
+    margin: 0 auto;
+    /* Center in container */
+    height: auto;
+    /* Let height grow naturally */
+    padding: 1rem;
+    box-sizing: border-box;
+    /* Include padding in width */
+  }
+
+  .BranchAndWorkflow_workflow {
+    max-height: 50vh;
+    /* Allow scrolling if too tall */
+    overflow-y: auto;
+  }
+}
+
+/* ======== Mobile (≤ 576px) ======== */
+@media (max-width: 576px) {
+  .BranchAndWorkflowmain {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .BranchAndWorkflow_domains,
+  .BranchAndWorkflow_workflow {
+    width: 100%;
+    max-width: 500px;
+    /* Keep it readable */
+    height: auto;
+    padding: 1rem;
+    border-radius: 8px;
+    /* Rounded corners for better look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for good UI */
+    background: #fff;
+    /* Ensure good contrast */
+  }
+
+  .BranchAndWorkflow_workflow {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  /* Center text and images */
+  .BranchAndWorkflow_domains ul,
+  .BranchAndWorkflow_domains h4,
+  .BranchAndWorkflow_domains h2 {
+    text-align: center;
+  }
+
+  .BranchAndWorkflow_domains img {
+    max-width: 50px;
+    margin: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 992px) {
+  .BranchAndWorkflowmain {
+    flex-direction: column !important;
+  }
+}

@@ -1,0 +1,111 @@
+.Webdevpage {
+  position: relative;
+  width: 99vw;
+  height: 70vh;
+  overflow: hidden;
+  /* margin-top: 70px; */
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Adjust 0.4 to control darkness */
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+  /* Make sure it’s above the overlay */
+}
+
+/* Tablets (portrait & landscape) */
+@media (max-width: 1024px) {
+  .Webdevpage {
+    height: 50vh;
+  }
+
+  .center-text {
+    font-size: 3rem;
+    padding: 0 10px;
+  }
+
+  .serviceonlogo {
+    width: 80% !important;
+    padding: 20px !important;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+  .Webdevpage {
+    height: 40vh;
+  }
+
+  .center-text {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+
+  .serviceonlogo {
+    width: 90% !important;
+    padding: 15px !important;
+  }
+
+  .serviceonlogo-icon {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .serviceonlogo-icon span {
+    font-size: 1.5rem !important;
+  }
+
+  /* Bootstrap columns will stack automatically,
+     but we ensure padding is comfortable */
+  .p-5 {
+    padding: 1.5rem !important;
+  }
+
+  .mt-4 {
+    margin-top: 1rem !important;
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+  .center-text {
+    font-size: 1.5rem;
+  }
+
+  .serviceonlogo {
+    padding: 10px !important;
+    font-size: 0.9rem;
+  }
+
+  .serviceonlogo-icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .serviceonlogo-icon span {
+    font-size: 1.2rem !important;
+  }
+}
